@@ -33,7 +33,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := device/oppo/find7/mkbootimg.mk
-TARGET_KERNEL_CONFIG := custom_find7_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_find7_defconfig
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
 
 # Bluetooth
@@ -47,7 +47,7 @@ COMMON_GLOBAL_CFLAGS += -DOPPO_CAMERA_HARDWARE
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 
 # Recovery
-RECOVERY_VARIANT := twrp
+# RECOVERY_VARIANT := twrp
 
 # Dummy
 TARGET_RECOVERY_FSTAB := device/oppo/find7/rootdir/etc/fstab.qcom
