@@ -1,6 +1,7 @@
 #
 # Copyright (C) 2014 The CyanogenMod Project
 # Copyright (C) 2014 The NamelessRom Project
+# Copyright (C) 2015 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -44,10 +45,6 @@ COMMON_GLOBAL_CFLAGS += -DOPPO_CAMERA_HARDWARE
 
 # Audio
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
-
-# Setupwizard
-BOARD_SETUP_WIZARD_CLASS     := device/oppo/find7/setupwizard/src
-BOARD_SETUP_WIZARD_RESOURCES += device/oppo/find7/setupwizard/res
 
 # Recovery
 RECOVERY_VARIANT := twrp
