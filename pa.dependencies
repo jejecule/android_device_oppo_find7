@@ -24,8 +24,8 @@
         "revision":    "cm-12.1"
     },
     {
-        "remote":      "blobs",
-        "repository":  "proprietary_vendor_oppo",
+        "remote":      "github",
+        "repository":  "jumoog/proprietary_vendor_oppo",
         "target_path": "vendor/oppo",
         "revision":    "cm-12.1"
     },
