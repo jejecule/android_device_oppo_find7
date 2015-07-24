@@ -596,5 +596,16 @@ static int camera_get_camera_info(int camera_id, struct camera_info *info)
     ALOGV("%s", __FUNCTION__);
     if (check_vendor_module())
         return 0;
-    return gVendorModule->get_camera_info(camera_id, info);
+
+    int result = gVendorModule->get_camera_info(0, info);
+    if (result == 0 && camera_id == 0) {
+        info->facing = CAMERA_FACING_BACK;
+        if (info->orientation >= 180) {
+            info->orientation -= 180;
+        } else {
+            info->orientation += 180;
+        }
+    }
+
+    return result;
 }
