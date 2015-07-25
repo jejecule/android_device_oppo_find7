@@ -69,6 +69,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
+# Power
+PRODUCT_PACKAGES += \
+    power.find7
+
 # Device uses high-density artwork where available
 # Also hack it to be compatible with Find7a and Find7s
 PRODUCT_AAPT_CONFIG := normal
