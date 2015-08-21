@@ -1,6 +1,7 @@
 /*
    Copyright (c) 2014, The CyanogenMod Project
    Copyright (c) 2014, The NamelessRom Project
+   Copyright (c) 2015, Paranoid Android
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -109,6 +110,7 @@ static void import_kernel_nv(char *name, int for_emulator)
                 !strcmp(value, "22") ||
                 !strcmp(value, "23")) {
             property_set("ro.oppo.device", "find7s");
+            property_set("ro.product.model", "X9076");
             property_set("ro.power_profile.override", "power_profile_find7s");
             property_set("ro.sf.lcd_density", "530");
             property_set("ro.sf.lcd_density.max", "640");
@@ -116,6 +118,7 @@ static void import_kernel_nv(char *name, int for_emulator)
             set_xxxhdpi_properties();
         } else {
             property_set("ro.oppo.device", "find7a");
+            property_set("ro.product.model", "X9006");
             property_set("ro.power_profile.override", "power_profile_find7a");
             property_set("ro.sf.lcd_density", "480");
             property_set("ro.sf.lcd_density.max", "560");
