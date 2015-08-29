@@ -68,6 +68,16 @@ PRODUCT_COPY_FILES += \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
 
+PRODUCT_DEVICE := find7
+PRODUCT_BRAND := OPPO
+PRODUCT_MANUFACTURER := OPPO
+PRODUCT_MODEL := Find7
+
+# Build description
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=5.0/LRX21M/1426582430:user/release-keys \
+    PRIVATE_BUILD_DESC="msm8974-user 5.0 LRX21M 193 release-keys"
+
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 # Power
