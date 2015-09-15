@@ -220,13 +220,6 @@ int enable)
 	return VENDOR_CALL(device, store_meta_data_in_buffers, enable);
 }
 
-static bool is4k(CameraParameters2 &params) {
-	int video_width, video_height;
-	params.getVideoSize(&video_width, &video_height);
-
-	return video_width*video_height > 1920*1080;
-}
-
 static int camera_start_recording(struct camera_device *device)
 {
 	ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
@@ -238,12 +231,6 @@ static int camera_start_recording(struct camera_device *device)
 
 	CameraParameters2 parameters;
 	parameters.unflatten(String8(camera_get_parameters(device)));
-	if (CAMERA_ID(device) == BACK_CAMERA_ID) {
-		if (is4k(parameters)) {
-			parameters.set("preview-format", "nv12-venus");
-		}
-		parameters.set("picture-size", "4160x3120");
-	}
 	camera_set_parameters(device,  strdup(parameters.flatten().string()));
 
 	CameraParameters2 parameters2;
@@ -361,29 +348,12 @@ static char *camera_get_parameters(struct camera_device *device)
 		wrapper->initial_get = false;
 		CameraParameters2 params;
 		params.unflatten(String8(parameters));
-		params.set("cyanogen-camera", "1");
 		VENDOR_CALL(device, set_parameters, strdup(params.flatten().string()));
 		parameters = VENDOR_CALL(device, get_parameters);
 	}
 
 	CameraParameters2 params;
 	params.unflatten(String8(parameters));
-	if (CAMERA_ID(device) == BACK_CAMERA_ID) {
-		/* Disable 352x288 preview sizes, the combination of this preview size and larger resolutions stalls the HAL */
-		params.set(CameraParameters::KEY_SUPPORTED_PREVIEW_SIZES,
-		"1920x1080,1440x1080,1280x960,1280x720,768x432,720x480,640x480,576x432,384x288,320x240");
-		params.set(CameraParameters::KEY_SUPPORTED_VIDEO_SIZES,
-		"4096x2160,3840x2160,1920x1080,1440x1080,1280x720,864x480,800x480,720x480,640x480,480x320,384x288,352x288,320x240,176x144");
-		params.set(CameraParameters::KEY_SUPPORTED_PICTURE_SIZES,
-		"4160x3120,4160x2340,4000x3000,4096x2160,3200x2400,3200x1800,2592x1944,2048x1536,1920x1080,1600x1200,1280x768,1280x720,1024x768,800x600,800x480,720x480,640x480,352x288,320x240");
-
-		params.set("supported-live-snapshot-sizes",
-		"3200x2400,2592x1944,2048x1536,1920x1080,1600x1200,1280x768,1280x720,1024x768,800x600,864x480,800x480,720x480,640x480,352x288,320x240");
-	} else if (CAMERA_ID(device) == FRONT_CAMERA_ID) {
-		/* Inject all supported resolutions */
-		params.set(CameraParameters::KEY_SUPPORTED_VIDEO_SIZES,
-		"1280x720,864x480,800x480,720x480,640x480,480x320,384x288,352x288,320x240,176x144");
-	}
 
 	return strdup(params.flatten().string());
 }
