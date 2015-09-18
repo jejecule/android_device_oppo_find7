@@ -348,6 +348,7 @@ static char *camera_get_parameters(struct camera_device *device)
 		wrapper->initial_get = false;
 		CameraParameters2 params;
 		params.unflatten(String8(parameters));
+                params.set("dis", "disable");
 		VENDOR_CALL(device, set_parameters, strdup(params.flatten().string()));
 		parameters = VENDOR_CALL(device, get_parameters);
 	}
