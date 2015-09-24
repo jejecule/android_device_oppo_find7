@@ -1,9 +1,9 @@
 [
   { 
     "remote": "github",
-    "repository": "NamelessRom/android_bootable_recovery-twrp",
+    "repository": "jejecule/android_bootable_recovery-twrp",
     "target_path": "bootable/recovery-twrp",
-    "revision": "n-2.1"
+    "revision": "5.1.1"
   },
   { 
     "remote": "github",
