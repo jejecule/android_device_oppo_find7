@@ -1,0 +1,50 @@
+[
+  { 
+    "remote": "github",
+    "repository": "NamelessRom/android_bootable_recovery-twrp",
+    "target_path": "bootable/recovery-twrp",
+    "revision": "n-2.1"
+  },
+  { 
+    "remote": "github",
+    "repository": "AOSPA-L/android_device_oppo_msm8974-common",
+    "target_path": "device/oppo/msm8974-common",
+    "revision": "lollipop-mr1"
+  },
+  {
+    "remote": "CyanogenMod",
+    "repository": "android_device_qcom_common",
+    "target_path": "device/qcom/common",
+    "revision": "cm-12.1"
+  },
+  {
+    "remote": "CyanogenMod",
+    "repository": "android_kernel_oppo_msm8974",
+    "target_path": "kernel/oppo/msm8974",
+    "revision": "cm-12.1"
+  },
+  {
+    "remote": "CyanogenMod",
+    "repository": "android_device_oppo_common",
+    "target_path": "device/oppo/common",
+    "revision": "5.1.1"
+  },
+  {
+    "remote": "tm",
+    "repository": "proprietary_vendor_oppo",
+    "target_path": "vendor/oppo",
+    "revision": "cm-12.1"
+  },
+  {
+    "remote": "github",
+    "repository": "NamelessRom/android_external_sepolicy",
+    "target_path": "external/sepolicy",
+    "revision": "n-2.1"
+  },
+  {
+   "remote": "CyanogenMod",
+   "repository": "android_hardware_cyanogen",
+   "target_path": "hardware/cyanogen",
+   "revision": "cm-12.1"
+  }
+]
