@@ -19,6 +19,9 @@
 # Inherit from MSM8974 common
 include device/oppo/msm8974-common/BoardConfigCommon.mk
 
+# Include path
+TARGET_SPECIFIC_HEADER_PATH += device/oppo/find7/include
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_find7
 TARGET_UNIFIED_DEVICE := true
