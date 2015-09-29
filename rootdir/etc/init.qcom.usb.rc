@@ -213,3 +213,26 @@ on property:sys.usb.config=diag,serial_smd,serial_tty,rmnet_bam,mass_storage,adb
     write /sys/class/android_usb/android0/enable 1
     start adbd
     setprop sys.usb.state ${sys.usb.config}
+    
+    on property:sys.usb.config=cdrom,adb
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 22D9
+    write /sys/class/android_usb/android0/idProduct 2776
+    write /sys/class/android_usb/android0/functions adb,mass_storage
+    write /sys/class/android_usb/android0/f_mass_storage/lun/cdrom 1
+    write /sys/class/android_usb/android0/f_mass_storage/lun/ro 1
+    write /sys/class/android_usb/android0/f_mass_storage/lun/file ${persist.cdrom.image}
+    write /sys/class/android_usb/android0/enable 1
+    start adbd
+    setprop sys.usb.state $sys.usb.config
+
+on property:sys.usb.config=cdrom
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 22D9
+    write /sys/class/android_usb/android0/idProduct 2777
+    write /sys/class/android_usb/android0/functions mass_storage
+    write /sys/class/android_usb/android0/f_mass_storage/lun/cdrom 1
+    write /sys/class/android_usb/android0/f_mass_storage/lun/ro 1
+    write /sys/class/android_usb/android0/f_mass_storage/lun/file ${persist.cdrom.image}
+    write /sys/class/android_usb/android0/enable 1
+    setprop sys.usb.state $sys.usb.config
