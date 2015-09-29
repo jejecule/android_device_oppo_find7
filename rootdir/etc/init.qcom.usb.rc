@@ -214,7 +214,7 @@ on property:sys.usb.config=diag,serial_smd,serial_tty,rmnet_bam,mass_storage,adb
     start adbd
     setprop sys.usb.state ${sys.usb.config}
     
-    on property:sys.usb.config=cdrom,adb
+    on property:sys.usb.config=mass_storage,adb
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 22D9
     write /sys/class/android_usb/android0/idProduct 2776
@@ -226,7 +226,7 @@ on property:sys.usb.config=diag,serial_smd,serial_tty,rmnet_bam,mass_storage,adb
     start adbd
     setprop sys.usb.state $sys.usb.config
 
-on property:sys.usb.config=cdrom
+on property:sys.usb.config=mass_storage
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 22D9
     write /sys/class/android_usb/android0/idProduct 2777
