@@ -46,5 +46,11 @@
    "repository": "android_hardware_cyanogen",
    "target_path": "hardware/cyanogen",
    "revision": "cm-12.1"
-  }
+  },
+  {
+    "remote": "github",
+    "repository": "jejecule/android_packages_inputmethods_LatinIME",
+    "target_path": "packages/inputmethods/LatinIME",
+    "revision": "5.1.1"
+  } 
 ]
