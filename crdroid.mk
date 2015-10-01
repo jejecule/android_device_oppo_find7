@@ -19,7 +19,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Crdroid stuff
-$(call inherit-product, vendor/crdroid/config/common.mk)
+$(call inherit-product, vendor/crdroid/config/common_full_phone.mk)
 
 # Enhanced NFC
 $(call inherit-product, vendor/crdroid/config/nfc_enhanced.mk)
