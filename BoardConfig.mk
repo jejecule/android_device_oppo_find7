@@ -47,9 +47,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oppo/find7/bluetooth
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 
-# Audio
-AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
-
 # Recovery
 # RECOVERY_VARIANT := twrp
 
