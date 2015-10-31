@@ -6,10 +6,10 @@
     "revision": "5.1.1"
   },
   { 
-    "remote": "github",
-    "repository": "jejecule/android_device_oppo_msm8974-common",
+    "remote": "CyanogenMod",
+    "repository": "android_device_oppo_msm8974-common",
     "target_path": "device/oppo/msm8974-common",
-    "revision": "5.1.1"
+    "revision": "cm-12.1"
   },
   {
     "remote": "CyanogenMod",
@@ -18,8 +18,8 @@
     "revision": "cm-12.1"
   },
   {
-    "remote": "CyanogenMod",
-    "repository": "android_kernel_oppo_msm8974",
+    "remote": "github",
+    "repository": "AOSPA-L/android_kernel_oppo_msm8974",
     "target_path": "kernel/oppo/msm8974",
     "revision": "cm-12.1"
   },
