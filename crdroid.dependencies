@@ -31,15 +31,15 @@
   },
   {
     "remote": "github",
-    "repository": "ThankYouLuigi/proprietary_vendor_oppo_sultan",
+    "repository": "TheMuppets/proprietary_vendor_oppo_sultan",
     "target_path": "vendor/oppo",
-    "revision": "cm-12.1-caf"
+    "revision": "cm-12.1"
   },
   {
     "remote": "github",
-    "repository": "jejecule/android_external_sepolicy",
+    "repository": "NamelessRom/android_external_sepolicy",
     "target_path": "external/sepolicy",
-    "revision": "5.1.1"
+    "revision": "n-2.1"
   },
   {
    "remote": "CyanogenMod",
