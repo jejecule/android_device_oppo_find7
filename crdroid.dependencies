@@ -31,9 +31,9 @@
   },
   {
     "remote": "github",
-    "repository": "TheMuppets/proprietary_vendor_oppo",
+    "repository": "ThankYouLuigi/proprietary_vendor_oppo_sultan",
     "target_path": "vendor/oppo",
-    "revision": "cm-12.1"
+    "revision": "cm-12.1-caf"
   },
   {
     "remote": "github",
