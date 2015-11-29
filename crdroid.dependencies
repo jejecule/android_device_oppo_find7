@@ -1,0 +1,56 @@
+[
+  { 
+    "remote": "github",
+    "repository": "NamelessRom/android_bootable_recovery-twrp",
+    "target_path": "bootable/recovery-twrp",
+    "revision": "n-3.0"
+  },
+  { 
+    "remote": "CyanogenMod",
+    "repository": "android_device_oppo_msm8974-common",
+    "target_path": "device/oppo/msm8974-common",
+    "revision": "cm-13.0"
+  },
+  {
+    "remote": "CyanogenMod",
+    "repository": "android_device_qcom_common",
+    "target_path": "device/qcom/common",
+    "revision": "cm-13.0""
+  },
+  {
+    "remote": "CyanogenMod",
+    "repository": "android_kernel_oppo_msm8974",
+    "target_path": "kernel/oppo/msm8974",
+    "revision": "cm-13.0""
+  },
+  {
+    "remote": "CyanogenMod",
+    "repository": "android_device_oppo_common",
+    "target_path": "device/oppo/common",
+    "revision": "cm-13.0""
+  },
+  {
+    "remote": "github",
+    "repository": "ThankYouLuigi/proprietary_vendor_oppo_sultan",
+    "target_path": "vendor/oppo",
+    "revision": "cm-13.0-caf"
+  },
+  {
+    "remote": "github",
+    "repository": "NamelessRom/android_external_sepolicy",
+    "target_path": "external/sepolicy",
+    "revision": "n-3.0"
+  },
+  {
+   "remote": "CyanogenMod",
+   "repository": "android_hardware_cyanogen",
+   "target_path": "hardware/cyanogen",
+   "revision": "cm-13.0"
+  },
+  {
+   "remote":      "github",
+   "repository":  "AOSPA-L/android_hardware_sony_timekeep",
+   "target_path": "hardware/sony/timekeep",
+   "revision":    "master"
+  }
+ ]
