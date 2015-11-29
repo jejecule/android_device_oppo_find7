@@ -44,10 +44,10 @@ PRODUCT_PACKAGES += \
     storage_init.sh \
     detect_storage_layout.sh
     
-+# LVM
+# LVM
     +PRODUCT_COPY_FILES += \
-+    $(LOCAL_PATH)/lvm/lvm:root/sbin/lvm \
-+    $(LOCAL_PATH)/lvm/lvm.conf:root/lvm/etc/lvm.conf
+    $(LOCAL_PATH)/lvm/lvm:root/sbin/lvm \
+    $(LOCAL_PATH)/lvm/lvm.conf:root/lvm/etc/lvm.conf
 
 # Audio
 PRODUCT_COPY_FILES += \
