@@ -20,8 +20,8 @@
 include device/oppo/msm8974-common/BoardConfigCommon.mk
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_find7
-TARGET_UNIFIED_DEVICE := true
+TARGET_INIT_VENDOR_LIB := libinit_msm
+TARGET_LIBINIT_DEFINES_FILE := device/oppo/find7-common/init/init_find7.cpp
 
 # Filesystem
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 16777216
